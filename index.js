@@ -76,8 +76,28 @@ controller.hears('help', ['direct_message', 'direct_mention'], function (bot, me
       '`bot attachment` to see a Slack attachment message.\n' +
       '`@<your bot\'s name>` to demonstrate detecting a mention.\n' +
       '`bot nathan` to see Nathan.\n' +
+      '`bot 3333` for a surprise!' +
       '`bot help` to see this again.'
   bot.reply(message, help)
+})
+
+controller.hears(['3333'], ['direct_message', 'direct_mention', 'mention'], function (bot, message) {
+  var text = ':money_with_wings:'
+  var attachments = [{
+    fallback: text,
+    pretext: ':money_with_wings:',
+    title: ':moneybag:',
+    image_url: 'https://56.media.tumblr.com/72586a94d3831f3d9b244a0fe2dc3c5e/tumblr_o1zh5ldhSS1uvarduo1_1280.jpg',
+    title_link: 'https://tumblr.com',
+    text: text,
+    color: '#FF6699'
+  }]
+
+  bot.reply(message, {
+    attachments: attachments
+  }, function (err, resp) {
+    console.log(err, resp)
+  })
 })
 
 controller.hears(['attachment'], ['direct_message', 'direct_mention'], function (bot, message) {
