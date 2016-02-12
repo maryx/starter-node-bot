@@ -35,7 +35,7 @@ controller.hears('.*', ['mention'], function (bot, message) {
   bot.reply(message, 'You really do care about me. :heart:')
 })
 
-controller.hears('nathan', ['mention'], function (bot, message) {
+controller.hears('nathan', ['direct_message', 'direct_mention', 'mention'], function (bot, message) {
     var text = 'Nathan said at some point that "the level of optimism here is frightening".'
     var attachments = [{
         fallback: text,
@@ -45,7 +45,7 @@ controller.hears('nathan', ['mention'], function (bot, message) {
         title_link: 'https://beepboophq.com/',
         text: text,
         color: '#FF6969'
-    },{
+    }, {
         fallback: text,
         pretext: ':+1: :+1:',
         title: 'good good times',
@@ -53,7 +53,7 @@ controller.hears('nathan', ['mention'], function (bot, message) {
         title_link: 'https://beepboophq.com/',
         text: text,
         color: '#FF6969'
-    },{
+    }, {
         fallback: text,
         pretext: ':+1: :+1: :+1:',
         title: 'ship it :squirrel: :100:',
