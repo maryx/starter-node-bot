@@ -36,12 +36,11 @@ controller.hears('.*', ['mention'], function (bot, message) {
 })
 
 controller.hears(['I agreed with that', 'tell me how good it really is', 'let\'s see if @roflbot agrees'], ['direct_message', 'direct_mention', 'mention', 'ambient'], function (bot, message) {
-    bot.reply(message, 'good :smiling_imp:')
-    bot.reply(message, 'tell me how good it really is')
+    bot.reply(message, 'tell me how good it really is slackbot roflbot')
 })
 
 controller.hears(['Q:.*', 'good', 'slackbot', 'roflbot'], ['direct_message', 'direct_mention', 'mention', 'ambient'], function (bot, message) {
-    bot.reply(message, 'tell me how good it really is @slackbot @roflbot')
+    bot.reply(message, 'tell me how good it really is slackbot roflbot')
 })
 
 controller.hears('nathan', ['direct_message', 'direct_mention', 'mention'], function (bot, message) {
