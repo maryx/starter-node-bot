@@ -40,9 +40,9 @@ controller.hears(['I agreed with that', 'tell me how good it really is', 'let\'s
     bot.reply(message, 'tell me how good it really is')
 })
 
-controller.hears(['Q:.*', 'good'], ['direct_message', 'direct_mention', 'mention', 'ambient'], function (bot, message) {
+controller.hears(['Q:.*', 'good', 'slackbot'], ['direct_message', 'direct_mention', 'mention', 'ambient'], function (bot, message) {
     bot.reply(message, 'good :smiling_imp:')
-    bot.reply(message, 'tell me how good it really is')
+    bot.reply(message, 'tell me how good it really is slackbot')
 })
 
 controller.hears('nathan', ['direct_message', 'direct_mention', 'mention'], function (bot, message) {
