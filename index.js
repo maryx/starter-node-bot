@@ -35,6 +35,10 @@ controller.hears('.*', ['mention'], function (bot, message) {
   bot.reply(message, 'You really do care about me. :heart:')
 })
 
+controller.hears(['I agreed with that', 'tell me how good it really is', "let's see if @roflbot agrees"], function (bot, mesage) {
+    bot.reply(message, 'good :smiling_imp:')
+})
+
 controller.hears('nathan', ['direct_message', 'direct_mention', 'mention'], function (bot, message) {
     var text = 'Nathan said at some point that "the level of optimism here is frightening".'
     var attachments = [{
@@ -77,7 +81,8 @@ controller.hears('help', ['direct_message', 'direct_mention'], function (bot, me
       '`@<your bot\'s name>` to demonstrate detecting a mention.\n' +
       '`bot nathan` to see Nathan.\n' +
       '`bot 3333` for a surprise!' +
-      '`bot help` to see this again.'
+      '`bot help` to see this again.' +
+      '`bot good` for awesomeness.'
   bot.reply(message, help)
 })
 
