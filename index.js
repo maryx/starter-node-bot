@@ -37,6 +37,7 @@ controller.hears('.*', ['mention'], function (bot, message) {
 
 controller.hears(['I agreed with that', 'tell me how good it really is', 'let\'s see if @roflbot agrees'], ['direct_message', 'direct_mention', 'mention', 'ambient'], function (bot, message) {
     bot.reply(message, 'good :smiling_imp:')
+    bot.reply(message, 'tell me how good it really is')
 })
 
 controller.hears('nathan', ['direct_message', 'direct_mention', 'mention'], function (bot, message) {
