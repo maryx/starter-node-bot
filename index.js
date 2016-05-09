@@ -35,7 +35,7 @@ controller.hears('.*', ['mention'], function (bot, message) {
   bot.reply(message, 'You really do care about me. :heart:')
 })
 
-controller.hears(['I agreed with that', 'tell me how good it really is', 'let\'s see if @roflbot agrees'], ['direct_message', 'direct_mention', 'mention'], function (bot, message) {
+controller.hears(['I agreed with that', 'tell me how good it really is', 'let\'s see if @roflbot agrees'], ['direct_message', 'direct_mention', 'mention', 'ambient'], function (bot, message) {
     bot.reply(message, 'good :smiling_imp:')
 })
 
@@ -80,9 +80,9 @@ controller.hears('help', ['direct_message', 'direct_mention'], function (bot, me
       '`bot attachment` to see a Slack attachment message.\n' +
       '`@<your bot\'s name>` to demonstrate detecting a mention.\n' +
       '`bot nathan` to see Nathan.\n' +
-      '`bot 3333` for a surprise!' +
-      '`bot help` to see this again.' +
-      '`bot good` for awesomeness.'
+      '`bot 3333` for a surprise!\n' +
+      '`bot help` to see this again.\n' +
+      '`bot good` for awesomeness.\n'
   bot.reply(message, help)
 })
 
